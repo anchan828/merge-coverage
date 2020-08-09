@@ -14,10 +14,17 @@ const args = yargs
     string: true,
     default: "coverage",
     description: "packages directory path",
-  }).argv;
+  })
+  .option("root", {
+    string: true,
+    default: process.cwd(),
+    description: "root",
+  })
+  .argv;
 
 const PACKAGES_DIR = args.packages;
 const COVERAGE_DIR = args.coverage;
+const ROOT = args.root;
 
 interface CoverageProperty {
   total: number;
@@ -184,12 +191,12 @@ class Lcov {
 
 const summaryFiles = glob.sync(
   path.resolve(
-    __dirname,
-    `../${PACKAGES_DIR}/*/${COVERAGE_DIR}/coverage-summary.json`
+    ROOT,
+    `${PACKAGES_DIR}/*/${COVERAGE_DIR}/coverage-summary.json`
   )
 );
 const lcovFiles = glob.sync(
-  path.resolve(__dirname, `../${PACKAGES_DIR}/*/${COVERAGE_DIR}/lcov.info`)
+  path.resolve(ROOT, `${PACKAGES_DIR}/*/${COVERAGE_DIR}/lcov.info`)
 );
 
 const jsonSummary = new JsonSummary();
@@ -204,6 +211,6 @@ for (const lcovFile of lcovFiles) {
 }
 
 jsonSummary.write(
-  path.resolve(__dirname, `../${COVERAGE_DIR}/coverage-summary.json`)
+  path.resolve(ROOT, `${COVERAGE_DIR}/coverage-summary.json`)
 );
-lcov.write(path.resolve(__dirname, `../${COVERAGE_DIR}/lcov.info`));
+lcov.write(path.resolve(ROOT, `${COVERAGE_DIR}/lcov.info`));
