@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
-  "bin": "dist/index.js",
+  "bin": {
+    "merge-coverage": "dist/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && tsc",
@@ -14,7 +16,7 @@
     "url": "git+https://github.com/anchan828/merge-coverage.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/anchan828/merge-coverage/issues"
   },
