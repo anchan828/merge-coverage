@@ -5,7 +5,7 @@ Merge coverage files for lerna
 ```json
 {
   "scripts": {
-    "test": "lerna run test && npx @anchan828/merge-coverage"
+    "test": "turbo run test && npx @anchan828/merge-coverage"
   }
 }
 ```
