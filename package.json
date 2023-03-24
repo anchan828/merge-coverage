@@ -24,7 +24,7 @@
     "@types/node": "18.15.7",
     "@types/yargs": "17.0.23",
     "glob": "9.3.2",
-    "release-it": "15.9.1",
+    "release-it": "15.9.3",
     "ts-node": "10.9.1",
     "typescript": "5.0.2",
     "yargs": "17.7.1"
