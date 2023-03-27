@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/glob": "8.1.0",
     "@types/node": "18.15.10",
-    "@types/yargs": "17.0.23",
+    "@types/yargs": "17.0.24",
     "glob": "9.3.2",
     "release-it": "15.9.3",
     "ts-node": "10.9.1",
