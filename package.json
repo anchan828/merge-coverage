@@ -21,7 +21,7 @@
   "homepage": "https://github.com/anchan828/merge-coverage#readme",
   "devDependencies": {
     "@types/glob": "8.1.0",
-    "@types/node": "20.11.14",
+    "@types/node": "20.11.15",
     "@types/yargs": "17.0.32",
     "glob": "10.3.10",
     "release-it": "17.0.3",
