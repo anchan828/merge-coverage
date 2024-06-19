@@ -23,7 +23,7 @@
     "@types/glob": "8.1.0",
     "@types/node": "20.14.5",
     "@types/yargs": "17.0.32",
-    "glob": "10.4.1",
+    "glob": "10.4.2",
     "release-it": "17.3.0",
     "ts-node": "10.9.2",
     "typescript": "5.4.5",
